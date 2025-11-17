@@ -27,3 +27,8 @@ icon: "error",
 });
     }
 })
+
+function update_goods() {
+
+    
+}
