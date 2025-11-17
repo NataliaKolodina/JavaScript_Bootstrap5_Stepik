@@ -15,15 +15,15 @@ document.querySelector('button.add-new').addEventListener('click', function(e) {
     document.getElementById('good-price').value = ''
     document.getElementById('good-count').value = '1'
     let goods = JSON.parse(localStorage.getItem('goods'))
-    goods.push(['good-'+goods.legth, name, price, count, 0, 0, 0])
+    goods.push(['good-'+goods.length, name, price, count, 0, 0, 0])
     localStorage.setItem('goods', JSON.stringify(goods))
     // update_goods()
     myModal.hide()
     } else {
         Swal.fire({
 icon: "error",
-  title: "Oops...",
-  text: "Something went wrong!"
+  title: "Ошибка",
+  text: "Пожалуйста, заполните все поля."
 });
     }
 })
