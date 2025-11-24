@@ -112,6 +112,22 @@ document.querySelector('.list').addEventListener('click', function(e) {
         cancelButtonColor: '#d33',
         confirmButtonText: 'Да',
         cancelButtonText: 'Отмена',
-
+    }).then((result) => {
+      if(result.isConfirmed) {
+        let goods = JSON.parse(localStorage.getItem('goods'))
+        for (let i = 0; i < goods.length; i++) {
+          if(goods[i][0] == e.target.dataset.delete) {
+            goods.splice(i, 1)
+            localStorage.setItem('goods', JSON.stringify(goods))
+            update_goods()
+          }
+          
+        }
+        Swal.fire(
+          "Удалено!",
+          "Выбранный товар был успешно удален",
+          "success"
+        )
+      }
     })
 })
