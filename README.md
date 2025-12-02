@@ -48,8 +48,18 @@ Key functionalities include:
 
 ### Alerts and Feedback
 - **SweetAlert2** for user-friendly alerts and confirmations  
-- Prevents accidental deletions and confirms key actions  
+- Prevents accidental deletions and confirms key actions
 
+## How to Run
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/NataliaKolodina/shop-project/
+```
+
+2. Open index.html in any modern browser.
+3. Explore product management, cart functionality, search, and sorting features.
 
 
 
